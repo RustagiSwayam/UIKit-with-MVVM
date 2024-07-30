@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol AnimalTableViewCellDelegate: AnyObject {
+    func playSoundButtonTapped(with name: String)
+}
+
 class AnimalTableViewCell: UITableViewCell {
     
     
@@ -21,9 +25,13 @@ class AnimalTableViewCell: UITableViewCell {
     @IBOutlet weak var existenceLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
     @IBOutlet weak var containerV: UIView!
+    @IBOutlet weak var playButton: UIButton!
     
-    override func awakeFromNib() {
+    weak var delegate: AnimalTableViewCellDelegate?
+        
+        override func awakeFromNib() {
             super.awakeFromNib()
+            
         }
 
         override func setSelected(_ selected: Bool, animated: Bool) {
@@ -33,17 +41,31 @@ class AnimalTableViewCell: UITableViewCell {
         override func layoutSubviews() {
             super.layoutSubviews()
         }
-        
-    func configure(with item: AnimalModel) {
+    
+    
+        func configure(with item: AnimalModel) {
             containerV.layer.cornerRadius = 10
             imageV.layer.cornerRadius = 10
             imageV.layer.shadowColor = UIColor.white.cgColor
             imageV.layer.shadowRadius = 5
-
-        containerV.backgroundColor = item.bgColor
-        imageV.image = UIImage(named: item.name)
-        nameLabel.text = item.name
-        existenceLabel.text = item.inExistence
-        infoLabel.text = item.info
+            
+            imageV.contentMode = .scaleToFill
+            containerV.backgroundColor = item.bgColor
+            imageV.image = UIImage(named: item.name)
+            nameLabel.text = item.name
+            existenceLabel.text = item.inExistence
+            infoLabel.text = item.info
+            
+            setupButtonTarget()
+        }
+    
+    private func setupButtonTarget(){
+        playButton.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+    }
+        
+        @objc private func buttonTapped() {
+            if let name = nameLabel.text {
+                delegate?.playSoundButtonTapped(with: name)
+            }
         }
     }

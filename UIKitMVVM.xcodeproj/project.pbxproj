@@ -19,6 +19,8 @@
 		D38F39B62C576CFF00F9F085 /* AnimalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F39B52C576CFF00F9F085 /* AnimalViewModel.swift */; };
 		D38F39BA2C5774C200F9F085 /* AnimalTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38F39B92C5774C200F9F085 /* AnimalTableViewCell.xib */; };
 		D38F39BB2C5774C200F9F085 /* AnimalTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F39B82C5774C200F9F085 /* AnimalTableViewCell.swift */; };
+		D38F39BE2C57B4E500F9F085 /* AnimalCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D38F39BD2C57B4E500F9F085 /* AnimalCollectionViewCell.xib */; };
+		D38F39BF2C57B4E500F9F085 /* AnimalCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D38F39BC2C57B4E500F9F085 /* AnimalCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		D38F39B52C576CFF00F9F085 /* AnimalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalViewModel.swift; sourceTree = "<group>"; };
 		D38F39B82C5774C200F9F085 /* AnimalTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalTableViewCell.swift; sourceTree = "<group>"; };
 		D38F39B92C5774C200F9F085 /* AnimalTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalTableViewCell.xib; sourceTree = "<group>"; };
+		D38F39BC2C57B4E500F9F085 /* AnimalCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimalCollectionViewCell.swift; sourceTree = "<group>"; };
+		D38F39BD2C57B4E500F9F085 /* AnimalCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnimalCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +133,8 @@
 			children = (
 				D38F39B82C5774C200F9F085 /* AnimalTableViewCell.swift */,
 				D38F39B92C5774C200F9F085 /* AnimalTableViewCell.xib */,
+				D38F39BC2C57B4E500F9F085 /* AnimalCollectionViewCell.swift */,
+				D38F39BD2C57B4E500F9F085 /* AnimalCollectionViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -192,6 +198,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D38F39A02C575DE000F9F085 /* Assets.xcassets in Resources */,
+				D38F39BE2C57B4E500F9F085 /* AnimalCollectionViewCell.xib in Resources */,
 				D38F39BA2C5774C200F9F085 /* AnimalTableViewCell.xib in Resources */,
 				D38F39A32C575DE000F9F085 /* Base in Resources */,
 				D38F399E2C575DDE00F9F085 /* Base in Resources */,
@@ -213,6 +220,7 @@
 				D38F39972C575DDE00F9F085 /* AppDelegate.swift in Sources */,
 				D38F39992C575DDE00F9F085 /* SceneDelegate.swift in Sources */,
 				D38F39B62C576CFF00F9F085 /* AnimalViewModel.swift in Sources */,
+				D38F39BF2C57B4E500F9F085 /* AnimalCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
